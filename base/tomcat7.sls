@@ -8,3 +8,7 @@ install tomcat7:
       - tomcat7-examples
       - tomcat7-user
     - refresh: True
+
+tomcat-manager:
+  user: vineet
+  passwd: vineet@2212    

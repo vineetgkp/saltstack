@@ -16,20 +16,6 @@ apache_service:
     - require:
       - pkg: apache_packages
 
-/etc/apache2/sites-enabled/salt-demo.conf:
-  apache.configfile:
-    - config:
-      - VirtualHost:
-          this: '*:80'
-          ServerName:
-            - salt-demo.com
-          ServerAlias:
-            - www.salt-demo.com
-          ErrorLog: /var/log/apache2/salt-demo.com-error_log
-          CustomLog: /var/log/apache2/salt-demo.com-access_log combined
-          DocumentRoot: /var/www/vhosts/salt-demo.com
-          Directory:
-            this: /var/www/vhosts/salt-demo.com
 
 /etc/apache2/sites-enabled/salt-openpage.conf:
   apache.configfile:

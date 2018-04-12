@@ -1,19 +1,18 @@
-install php5.6:
+php_repo:
   pkgrepo.managed:
-    - humanname: ondrej/php
-    - ppa: ondrej/php
-    - keyserver: keyserver.ubuntu.com
-    - keyid: E5267A6C
-    - refresh_db: true
+    - humanname: PHP 5.6 Repository
+    - name: deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main
+    - file: /etc/apt/sources.list.d/php56.list
+
   pkg.installed:
     - pkgs:
       - libapache2-mod-php5.6
-      - php5.6 
-      - php5.6-bcmath 
-      - php5.6-cgi 
-      - php5.6-curl 
-      - php5.6-enchant 
-      - php5.6-gd 
+      - php5.6
+      - php5.6-bcmath
+      - php5.6-cgi
+      - php5.6-curl
+      - php5.6-enchant
+      - php5.6-gd
       - php5.6-interbase
       - php5.6-intl
       - php5.6-json
@@ -35,8 +34,5 @@ install php5.6:
       - php5.6-cli
       - php5.6-common
       - php5.6-dev
-      - php5.6-imagick
       - php5.6-imap
-      - php5.6-propro
-      - php5.6-raphf
     - refresh: True
